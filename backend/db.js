@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-
-mongoose.connect("mongodb+srv://addy:addy@cluster0.ildwy.mongodb.net/Paytm").then(()=>{
+const DBURL=process.env.YOURLINK || "Not found";
+console.log("Your MongoDB url is ",DBURL);
+mongoose.connect(DBURL).then(()=>{
     console.log("MongoDB Connected");
 });
 const UserSchema=mongoose.Schema({
