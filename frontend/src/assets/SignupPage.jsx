@@ -33,7 +33,6 @@ function SignupPage() {
                 window.location.href = "/Dashboard";
             } else {
                 alert("Error Signing up");
-
             }
         } catch (error) {
             console.error("Error during signup:", error);
