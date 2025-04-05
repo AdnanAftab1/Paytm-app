@@ -159,8 +159,6 @@ app.post("/transfer",authmiddleware,async (req,res)=>{
         await sessioner.abortTransaction();
         return res.status(403).send({message:`Not Found`});
     }
-
-
     const MT=await Account.updateOne({userId:req.userId.userId},{ $inc: { balance: -amount } }).session(sessioner);
     const HT=await Account.updateOne({userId:to},{ $inc: { balance: amount } }).session(sessioner);
 
