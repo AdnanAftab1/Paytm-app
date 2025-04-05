@@ -3,6 +3,11 @@
 
 How to run this project:
 
+# Prerequisites
+### Open backend/db and post a valid MongoDB connection string in the `db.js` file
+
+
+
 1. Clone this repository
 2. Run `cd backend' in one terminal
 3. Run `npm install`
